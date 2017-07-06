@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Markdown preview</title>
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-e04a23d39bf81b7db3c635177756ef51bc171feb440be9e174933c6eb56382da.css" media="all" rel="stylesheet" />  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-df2cdfc6957e3fbd42155d8b95bb109f6d4e35768227a2401b9b6ea5bfb88e83.css" media="all" rel="stylesheet" />  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-0985c539aa8585eaf2bfff13b4cbb98befa6556d244e6cd5cf4ce0a57700d11e.css" media="all" rel="stylesheet" />  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-0985c539aa8585eaf2bfff13b4cbb98befa6556d244e6cd5cf4ce0a57700d11e.css" media="all" rel="stylesheet" />
+    <script src="marked.min.js"></script>
+    <script type="text/javascript">
+      function sourceChanged() {
+        document.getElementById('preview').innerHTML =
+          marked(document.getElementById('source').value)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        padding-left: 2em;
+      }
+      #source-pane {
+        float: left;
+        padding-top: 1em;
+      }
+      #preview-pane {
+        float: left;
+        margin-left: 2em;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Markdown preview</h1>
+    <div id="source-pane">
+      <textarea id="source" cols="80" rows="30" onkeyup="sourceChanged()"></textarea>
+    </div>
+    <div id="preview-pane">
+      <article id="preview" class='markdown-body'>
+      </article>
+    </div>
+  </body>
+</html>
